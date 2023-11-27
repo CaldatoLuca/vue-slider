@@ -23,7 +23,15 @@ createApp({
           "img/05.jpg",
         ],
       },
-      currentImage: 1,
+      currentImage: 0,
     };
+  },
+  methods: {
+    next() {
+      this.currentImage++;
+    },
+    prev() {
+      this.currentImage--;
+    },
   },
 }).mount("#app");

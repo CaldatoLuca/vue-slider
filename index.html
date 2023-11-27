@@ -44,15 +44,23 @@
           </div>
 
           <!-- frecce con eventi -->
-          <div class="prev"><i class="fa-solid fa-circle-left"></i></div>
-          <div class="next"><i class="fa-solid fa-circle-right"></i></div>
+          <div class="prev" @click="prev">
+            <i class="fa-solid fa-circle-left"></i>
+          </div>
+          <div class="next" v-on:click="next">
+            <i class="fa-solid fa-circle-right"></i>
+          </div>
         </div>
         <!-- ?blocco con immagine principale/ -->
 
         <!-- ?blocco thumbnails -->
         <div class="thumbnails">
           <!-- immagine thumbnail -->
-          <div v-for="(image, index) in images.src" class="thumb">
+          <div
+            v-for="(image, index) in images.src"
+            class="thumb"
+            :class="index === currentImage ? 'thumbnail-active ' : '' "
+          >
             <img :src="image" :alt="`Immagine ${index + 1}`" />
           </div>
         </div>
