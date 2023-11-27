@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- !my css/ -->
   </head>
+
   <body>
     <div id="app" v-cloak>
       <!-- *header del sito -->
@@ -32,9 +33,12 @@
         <div class="items">
           <!-- blocco con immagine e descrizione -->
           <div class="item active">
-            <img :src="images.src[0]" :alt="images.title[0]" />
+            <img
+              :src="images.src[currentImage]"
+              :alt="images.title[currentImage]"
+            />
             <div class="img-text">
-              <h3>{{ images.title[0] }}</h3>
+              <h3>{{ images.title[currentImage] }}</h3>
               <p>{{ images.description }}</p>
             </div>
           </div>

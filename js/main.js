@@ -23,6 +23,7 @@ createApp({
           "img/05.jpg",
         ],
       },
+      currentImage: 1,
     };
   },
 }).mount("#app");
