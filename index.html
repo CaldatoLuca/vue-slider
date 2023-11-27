@@ -20,17 +20,13 @@
       <!-- *header del sito -->
       <header>
         <h1>{{ mainTitle }}</h1>
-        <div>
-          <button type="button" class="stop">Stop</button>
-          <button type="button" class="start">Start</button>
-        </div>
       </header>
       <!-- *header del sito/ -->
 
       <!-- *main del sito -->
       <main>
         <!-- ?blocco con immagine principale -->
-        <div class="items">
+        <div class="items" @mouseover="stop" @mouseout="start">
           <!-- blocco con immagine e descrizione -->
           <div class="item active">
             <img

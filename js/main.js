@@ -24,6 +24,7 @@ createApp({
         ],
       },
       currentImage: 0,
+      event: null,
     };
   },
   methods: {
@@ -38,5 +39,14 @@ createApp({
     changeThumb(index) {
       this.currentImage = index;
     },
+    stop() {
+      clearInterval(this.event);
+    },
+    start() {
+      this.event = setInterval(this.next, 2000);
+    },
+  },
+  mounted() {
+    this.event = setInterval(this.next, 2000);
   },
 }).mount("#app");
