@@ -29,9 +29,11 @@ createApp({
   methods: {
     next() {
       this.currentImage++;
+      if (this.currentImage > this.images.src.length - 1) this.currentImage = 0;
     },
     prev() {
       this.currentImage--;
+      if (this.currentImage < 0) this.currentImage = this.images.src.length - 1;
     },
   },
 }).mount("#app");
