@@ -32,7 +32,7 @@
         <div class="items">
           <!-- blocco con immagine e descrizione -->
           <div class="item active">
-            <img :src="images.src" :alt="images.title[0]" />
+            <img :src="images.src[0]" :alt="images.title[0]" />
             <div class="img-text">
               <h3>{{ images.title[0] }}</h3>
               <p>{{ images.description }}</p>
@@ -48,20 +48,8 @@
         <!-- ?blocco thumbnails -->
         <div class="thumbnails">
           <!-- immagine thumbnail -->
-          <div class="thumbnail-active">
-            <img src="img/01.jpg" alt="" />
-          </div>
-          <div class="thumbnail-active">
-            <img src="img/02.jpg" alt="" />
-          </div>
-          <div class="thumbnail-active">
-            <img src="img/03.jpg" alt="" />
-          </div>
-          <div class="thumbnail-active">
-            <img src="img/04.jpg" alt="" />
-          </div>
-          <div class="thumbnail-active">
-            <img src="img/05.jpg" alt="" />
+          <div v-for="(image, index) in images.src" class="thumbnail-active">
+            <img :src="image" :alt="`Immagine ${index + 1}`" />
           </div>
         </div>
         <!-- ?blocco thumbnails/ -->

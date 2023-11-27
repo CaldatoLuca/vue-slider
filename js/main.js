@@ -15,7 +15,13 @@ createApp({
           "Caraibi",
         ],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        src: "img/01.jpg",
+        src: [
+          "img/01.jpg",
+          "img/02.jpg",
+          "img/03.jpg",
+          "img/04.jpg",
+          "img/05.jpg",
+        ],
       },
     };
   },
