@@ -20,9 +20,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 img {
   display: block;
+}
+.red {
+  color: red;
 }
 
 /* !header */
@@ -32,15 +34,6 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(236, 227, 206);
-}
-.stop,
-.start {
-  padding: 5px 10px;
-  background: rgb(58, 77, 57);
-  color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 25px;
 }
 
 /* !main */

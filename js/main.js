@@ -25,6 +25,7 @@ createApp({
       },
       currentImage: 0,
       event: null,
+      eventStop: false,
     };
   },
   methods: {
@@ -41,9 +42,11 @@ createApp({
     },
     stop() {
       clearInterval(this.event);
+      this.eventStop = true;
     },
     start() {
       this.event = setInterval(this.next, 2000);
+      this.eventStop = false;
     },
   },
   mounted() {
