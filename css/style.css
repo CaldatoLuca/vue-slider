@@ -1,8 +1,7 @@
 /* !vue js */
 [v-cloak] {
-  display: none;
+  display: none !important;
 }
-
 /* !reset */
 
 * {

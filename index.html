@@ -60,6 +60,7 @@
             v-for="(image, index) in images.src"
             class="thumb"
             :class="index === currentImage ? 'thumbnail-active ' : '' "
+            @click="changeThumb(index)"
           >
             <img :src="image" :alt="`Immagine ${index + 1}`" />
           </div>

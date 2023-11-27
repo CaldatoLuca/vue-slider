@@ -35,5 +35,8 @@ createApp({
       this.currentImage--;
       if (this.currentImage < 0) this.currentImage = this.images.src.length - 1;
     },
+    changeThumb(index) {
+      this.currentImage = index;
+    },
   },
 }).mount("#app");
