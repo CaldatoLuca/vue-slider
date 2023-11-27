@@ -18,7 +18,7 @@
     <div id="app" v-cloak>
       <!-- *header del sito -->
       <header>
-        <h1>Carosello News</h1>
+        <h1>{{ mainTitle }}</h1>
         <div>
           <button type="button" class="stop">Stop</button>
           <button type="button" class="start">Start</button>
@@ -32,10 +32,10 @@
         <div class="items">
           <!-- blocco con immagine e descrizione -->
           <div class="item active">
-            <img src="img/01.jpg" alt="Immagine 1" />
+            <img :src="images.src" :alt="images.title[0]" />
             <div class="img-text">
-              <h3>Prova</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisic</p>
+              <h3>{{ images.title[0] }}</h3>
+              <p>{{ images.description }}</p>
             </div>
           </div>
 
