@@ -50,6 +50,7 @@ createApp({
     },
   },
   mounted() {
-    this.event = setInterval(this.next, 2000);
+    this.start();
+    // this.event = setInterval(this.next, 2000);
   },
 }).mount("#app");
