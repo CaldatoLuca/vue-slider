@@ -1,6 +1,4 @@
-# README
-
-## Carosello News
+# Carosello News
 
 ### Descrizione
 Questo progetto implementa un carosello di notizie utilizzando HTML, CSS, JavaScript e Vue.js.
